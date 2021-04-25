@@ -1,7 +1,15 @@
-import x from './test'
+import axios from 'axios';
 
-const num = 33;
-console.log(`I import ${x} from another module. Variable num is ${num}`);
-const a = "hello"
-const b = "everyone"
-console.log(`This is a text: ${a} ${b}`)
+async function getResult(query){
+
+  try{
+    const res = await axios(`https://forkify-api.herokuapp.com/api/search?q=${query}`);
+    const recipes = res.data.recipes;
+    console.log(recipes)
+  } catch(e) {
+    alert(e)
+  }
+
+}
+
+getResult('pizza')
