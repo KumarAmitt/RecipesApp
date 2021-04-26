@@ -88,7 +88,7 @@ export default class Recipe{
     const newServings = type === 'dec' ? this.servings - 1 : this.servings + 1;
 
     this.ingredients.forEach(ing => {
-      ing.counr *= (newServings / this.servings);
+      ing.count *= (newServings / this.servings);
     });
     this.servings = newServings;
   }
