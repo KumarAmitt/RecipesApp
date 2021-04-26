@@ -15,6 +15,7 @@ Global state of the app
 */
 
 const state = {};
+window.state = state;
 
 // SEARCH CONTROLLER
 const controlSearch = async () => {
@@ -118,6 +119,26 @@ const controlList = () => {
     listView.renderItem(item);
   })
 }
+
+// Handle delete and Update list item events
+elements.shopping.addEventListener('click', e => {
+  const id = e.target.closest('.shopping__item').dataset.itemid;
+
+
+  // Handle the delete button
+  if(e.target.matches('.shopping__delete, .shopping__delete *')){
+    // Delete from state
+    state.list.deleteItem(id);
+
+    // delete from UI
+    listView.deleteItem(id);
+
+    // Handle the count update
+  }else if(e.target.matches('.shopping__count-value')){
+    const val = parseFloat(e.target.value, 10);
+    state.list.updateCount(id, val);
+  }
+})
 
 // Handling recipe button clicks
 
