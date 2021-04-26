@@ -33,6 +33,7 @@
     "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
     "babel-polyfill": "^6.26.0",
-    "fractional": "^1.0.0"
+    "fractional": "^1.0.0",
+    "uniqid": "^5.3.0"
   }
 }
