@@ -89,7 +89,7 @@ const controlRecipe = async () => {
       recipeView.renderRecipe(state.recipe);
       console.log(state.recipe)
     }catch(e){
-        alert('From control Recipe Block' + '\n' + e);
+        alert('From index Recipe Block' + '\n' + e);
     }
   }
 
