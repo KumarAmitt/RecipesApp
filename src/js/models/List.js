@@ -24,4 +24,5 @@ export default class List {
   updateCount(id, newCount){
     this.items.find(el => el.id === id).count = newCount;
   }
+
 }
