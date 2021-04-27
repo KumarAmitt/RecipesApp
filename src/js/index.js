@@ -101,7 +101,6 @@ const controlRecipe = async () => {
     }
   }
 
-
 }
 
 ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, controlRecipe));
@@ -135,7 +134,7 @@ elements.shopping.addEventListener('click', e => {
 
     // Handle the count update
   }else if(e.target.matches('.shopping__count-value')){
-    const val = parseFloat(e.target.value, 10);
+    const val = parseFloat(e.target.value);
     state.list.updateCount(id, val);
   }
 })
