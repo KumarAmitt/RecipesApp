@@ -11,6 +11,7 @@ export default class Likes {
       img
     }
     this.likes.push(like);
+    return like;
   }
 
   deleteLike(id){

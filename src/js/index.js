@@ -159,16 +159,18 @@ const controlLike = () => {
 
     // Toggle the like button
       likesView.toggleLikeBtn(true)
-    // Add like to UI list
-    console.log(state.likes);
 
+    // Add like to UI list
+    likesView.renderLike(newLike)
   }else{
     //Remove like from the state
       state.likes.deleteLike(currentID)
+
     //Toggle the like button
     likesView.toggleLikeBtn(false)
+
     //Remove like from UI list
-    console.log(state.likes)
+    likesView.deleteLike(currentID);
   }
   likesView.toggleLikeMenu(state.likes.getNumLikes());
 }
