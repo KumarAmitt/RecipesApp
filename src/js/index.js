@@ -17,7 +17,6 @@ Global state of the app
 */
 
 const state = {};
-window.state = state;
 
 // SEARCH CONTROLLER
 const controlSearch = async () => {
@@ -60,7 +59,6 @@ elements.searchResPages.addEventListener('click', e => {
     const goToPage = parseInt(btn.dataset.goto, 10);
     searchView.clearResults();
     searchView.renderResults(state.search.result, goToPage)
-    console.log(goToPage)
   }
 })
 
@@ -70,7 +68,6 @@ elements.searchResPages.addEventListener('click', e => {
 const controlRecipe = async () => {
   // Get ID from URL
   const id = window.location.hash.replace('#', '');
-  console.log(id)
 
   if(id){
     // Prepare UI for changes
@@ -209,7 +206,6 @@ elements.recipe.addEventListener('click', e => {
   }
 })
 
-window.l = new List();
 
 
 
