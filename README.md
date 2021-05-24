@@ -2,13 +2,11 @@
 
 An app to find the Recipes of the dish you want to cook.
 
-![screenshot](./src/img/.png)
-
-![screenshot](./src/img/.png)
+![screenshot](./src/img/mkr.png)
 
 ## Live Demo
 
-[View Live]()
+[View Live](https://kumaramitt.github.io/RecipesApp/)
 
 ## Built With 🛠
 
